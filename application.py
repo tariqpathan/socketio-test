@@ -7,7 +7,7 @@ socketio = SocketIO(app, engineio_logger=True, logger=True)
 
 @app.route("/", methods=["GET"])
 def index():
-    return render_template("layout.html")
+    return render_template("index.html")
 
 @socketio.on('message')
 def handleMessage(msg):

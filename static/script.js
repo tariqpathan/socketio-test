@@ -22,6 +22,7 @@ function addMessage () {
     document.querySelector('#btn').onclick = () => {
         const message = document.querySelector('input').value;
         socket.emit('message', {'message': message});
+        message = '';
         return false;
     };
 }
